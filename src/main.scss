@@ -1,0 +1,27 @@
+@import '~bootstrap/scss/bootstrap';
+
+
+:root {
+    --primary-color: #C63940;
+    --tawk-header-background-color: --primary-color;
+    --primary-color-dark: #AB2229;
+    --secondary-color: #426585;
+    --content-color: #141414;
+    --text-light: #FFFFFF;
+    --section-bg: #F9F9F9;
+    --content-size: 18px;
+    --body-background: #fff;
+    --primary-font : 'Urbanist', sans-serif;
+    --button-height: 50px;
+    
+    @media (max-width: 1024px) {
+        --content-size: 16px;
+    }
+    @media (max-width: 768px) {
+        --content-size: 14px;
+    }
+}
+$lightgrey : #ccc;
+
+@import "./sass/base/global";
+@import "./sass/base/typography";
