@@ -132,33 +132,6 @@ const Home = () => {
 		}
 	];
 
-<<<<<<< HEAD
-=======
-	const imageGalaryData = [
-		{
-			imageUrl1 : './images/projects-galary/kitchen-before.jpg',
-			imageUrl2 : './images/projects-galary/kitchen-after.jpg',
-		},
-		{
-			imageUrl1 : './images/projects-galary/bathroom-before.webp',
-			imageUrl2 : './images/projects-galary/bathroom-after.webp',
-		},
-		{
-			imageUrl1 : './images/projects-galary/bohlman-before.jpg',
-			imageUrl2 : './images/projects-galary/bohlman-after.jpg',
-		},
-		{
-			imageUrl1 : './images/projects-galary/flooring-before.jpg',
-			imageUrl2 : './images/projects-galary/flooring-after.jpg',
-		},
-		{
-			imageUrl1 : './images/projects-galary/basement-before.png',
-			imageUrl2 : './images/projects-galary/basement-after.png',
-		},
-		
-		
-	];
->>>>>>> parent of 940df69 (adding projects)
 
 	const FeaturedPropertiesSlider ={
 		infinite: true,

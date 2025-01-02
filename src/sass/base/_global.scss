@@ -100,14 +100,8 @@
 	.font-weight-400{font-weight: 400 !important;}
 	.font-weight-600{font-weight: 600 !important;}
 	.font-weight-700{font-weight: 700 !important;}
-	.font-size-7{font-size: 7px !important;}
-	.font-size-8{font-size: 8px !important;}
-	.font-size-9{font-size: 9px !important;}
-	.font-size-10{font-size: 10px !important;}
-	.font-size-11{font-size: 11px !important;}
-	.font-size-12{font-size: 12px !important;}
-	.font-size-13{font-size: 13px !important;}
 	.font-size-14{font-size: 14px !important;}
+	.font-size-16{font-size: 16px !important;}
 	.font-size-20{font-size: 20px !important;}
 	.cursor-pointer{cursor: pointer !important;}
 	.truncate{overflow: hidden; text-overflow: ellipsis;}
@@ -119,7 +113,6 @@
 	.font-style-italic{font-style: italic !important;}
 	.nowrap{white-space: nowrap !important;}
 	.align-items-inherit{align-items: inherit !important;}
-	.border-width-2{border-width: 2px !important;}
 
 	.position-relative{position: relative;}
 
@@ -143,28 +136,7 @@
 	.badge{--px: 0.7em; min-height: 20px; display: inline-flex; align-items: center; padding: 0.30em var(--px);}
 	.badge-primary{background: var(--primary-color);}
 	.badge-secondary{background: var(--secondary-color);}
-	.badge-best-seller{background: #DE0E57; color: white;}
-	.badge-top-rated{background: #7700FF; color: white;}
-	.badge-warning{color: white;}
-	.badge-success{color: white;}
-	.badge-published{color: #23B6B4; background: #EBF5F5;}
-	.badge-unpublished{color: #FFA20F; background: #FFF4E2;}
-	.badge-inreview{color: white; background: #F17AA9;}
-	.badge-info{color: white; background: #3D48EA;}
-	.badge-rejected{color: white; background: #FF4945;}
-	.badge-modification{color: white; background: #282B2E; }
-	.badge-outline-primary{border: solid 1px RGB(var(--primary-color)); color: RGB(var(--primary-color)); background: transparent;}
 
-	.loading-bar{display: flex; cursor: pointer; font-size: 12px; font-weight: 600; min-height: 45px; padding: 5px 15px; background: var(--primary-color-light); align-items: center; justify-content: center; color: RGB(var(--primary-color)); border-radius: 10px;}
-	.loading-bar:hover{background: RGB(var(--primary-color)); color: white;}
-
-	.dismiss-element{cursor: pointer;}
-	.action-icon{cursor: pointer;}
-
-	.profile-image{--size: 170px; margin: 0; width: var(--size); height: var(--size); background: #CCC; border-radius: 20px; overflow: hidden;}
-
-	.add-button{font-size: 12px; font-weight: 600; --button-height: 20px; padding: 0.1em var(--px);}
-	.add-button.disabled{background: var(--primary-color-light); color: #9EA0A9; border: 0;}
 
 	.tab-item{--px: 30px; font-size: 14px; cursor: pointer; background: var(--light-grey); min-height: 36px; display: flex; align-items: center; padding: 4px var(--px); border-radius: 50px; color: var(--grey-color);}
 	.tab-item.active{background: RGB(var(--primary-color)); color: white;}
@@ -237,61 +209,6 @@
 	.align-top{vertical-align: top;}
 	.width-cover{width: 100%;}
 
-	.p-both-60 { 
-		padding-top: 60px; padding-bottom: 60px;
-		@media(max-width:767px) {padding-top: 30px; padding-bottom: 30px;}
-	}
-	.p-both-30 { 
-		padding-top: 30px; padding-bottom: 30px;
-		@media(max-width:767px) {padding-top: 15px; padding-bottom: 15px;}
-	}
-	.pb-60{
-		padding-bottom: 60px;
-		@media(max-width:767px) {padding-bottom: 30px;}
-	}
-	.pt-60{
-		padding-top: 60px;
-		@media(max-width:767px) { padding-top: 30px;}
-	}
-	.pt-30{
-		padding-top: 30px;
-		@media(max-width:767px) { padding-top: 20px;}
-	}
-
-	.m-both-60 { 
-		margin-top: 60px; margin-bottom: 60px;
-		@media(max-width:767px) {margin-top: 30px; margin-bottom: 30px;}
-	}
-	
-	.mb-60 {
-		margin-bottom: 60px;
-		@media(max-width:767px) {margin-bottom: 30px;}
-	}
-	.mb-50 {
-		margin-bottom: 50px;
-		@media(max-width:767px) {margin-bottom: 25px;}
-	}
-	.mt-60 {
-		margin-top: 60px;
-		@media(max-width:767px) { margin-top: 30px;}
-	}
-	.mb-30 {
-		margin-bottom: 30px;
-		@media(max-width:767px) { margin-bottom: 20px;}
-	}
-	.mb-40 {
-		margin-bottom: 40px;
-		@media(max-width:767px) { margin-bottom: 20px;}
-	}
-	.mb-20 {
-		margin-bottom: 20px;
-	}
-	.mb-100 {
-		margin-bottom: 100px;
-		@media(max-width:992px) {margin-bottom: 50px;}
-		@media(max-width:767px) {margin-bottom: 30px;}
-	}
- 
 	.discover-property-btn{
 		--size: 110px; position: fixed; bottom: 30px; left: 20px; height: var(--size); width: var(--size); border-radius: var(--size); background: white; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); color: white; animation: image_scling 0.8s infinite linear;
 		// a{color: white;}
