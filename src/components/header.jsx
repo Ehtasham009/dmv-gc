@@ -115,7 +115,7 @@ function Header() {
             <Link to="/" className={activeMenuItem === 'home' ? 'active' : ''} >Home</Link>
             <Link to="/about" className={activeMenuItem === 'about' ? 'active' : ''} >About Us</Link>
             <Link to="/services" className={activeMenuItem === 'services' ? 'active' : ''} >Services</Link>
-            <Link to="/projects" className={activeMenuItem === 'projects' ? 'active' : ''} >Projects</Link>
+            {/* <Link to="/projects" className={activeMenuItem === 'projects' ? 'active' : ''} >Projects</Link> */}
             {/* <Link to="/handyman-services" className={activeMenuItem === 'handyman-services' ? 'active' : ''} >Handyman Services</Link> */}
             {/* <Link to="/inhouse-custom-design" className={activeMenuItem === 'inhouse-custom-design' ? 'active' : ''} >Custom Design</Link> */}
             <Link to="/faq" className={activeMenuItem === 'faq' ? 'active' : ''} >FAQs</Link>
