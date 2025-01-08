@@ -6,7 +6,7 @@ import { ReactSVG } from 'react-svg';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { io } from 'socket.io-client';
 import axios from 'axios';
-const socket = io('https://backend.dmv-gc.com');
+const socket = io('https://api.dmv-gc.com/');
 const StyledCom = styled.div`
     position: absolute;
     bottom: 70px;
@@ -448,7 +448,7 @@ function SupportChatModule({ isActive, onClose }) {
                     setShowScreen('chooseChat');
                 }, 2000);
                 try {
-                    const response = await fetch('https://backend.dmv-gc.com/api/chat/saveboothistory', {
+                    const response = await fetch('https://api.dmv-gc.com/api/chat/saveboothistory', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
@@ -473,7 +473,7 @@ function SupportChatModule({ isActive, onClose }) {
     const handleContinue = async () => {
         if (firstName && lastName && phoneNumber && email) {
             try {
-                const response = await axios.post('https://backend.dmv-gc.com/api/chat/save-chat-form', {
+                const response = await axios.post('https://api.dmv-gc.com/api/chat/save-chat-form', {
                     firstName,
                     lastName,
                     phoneNumber,

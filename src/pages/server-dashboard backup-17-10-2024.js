@@ -16,7 +16,7 @@ import { ToastContainer, toast } from 'react-toastify';
 // import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 
-const socket = io('https://backend.dmv-gc.com');
+const socket = io('https://api.dmv-gc.com/');
 
 function ServerDashboard() {
     const navigate = useNavigate();
@@ -131,7 +131,7 @@ function ServerDashboard() {
 
     const fetchChatForms = async () => {
         try {
-            const { data } = await axios.get('https://backend.dmv-gc.com/api/chat/get-chat-forms');
+            const { data } = await axios.get('https://api.dmv-gc.com/api/chat/get-chat-forms');
             setChatForms(data);
         } catch (error) {
             console.error('Error fetching chat forms:', error);
@@ -140,7 +140,7 @@ function ServerDashboard() {
 
     const fetchContactForms = async () => {
         try {
-            const { data } = await axios.get('https://backend.dmv-gc.com/api/auth/get-contact-forms');
+            const { data } = await axios.get('https://api.dmv-gc.com/api/auth/get-contact-forms');
             setContactForms(data);
         } catch (error) {
             console.error('Error fetching contact forms:', error);
@@ -149,7 +149,7 @@ function ServerDashboard() {
 
     const fetchSupportBotChats = async () => {
         try {
-            const { data } = await axios.get('https://backend.dmv-gc.com/api/chat/getboothistory');
+            const { data } = await axios.get('https://api.dmv-gc.com/api/chat/getboothistory');
             console.log(data, 'support botchats')
             setSupportBotChats(data);
         } catch (error) {
@@ -159,7 +159,7 @@ function ServerDashboard() {
 
     const fetchActiveChats = async () => {
         try {
-            const { data } = await axios.get('https://backend.dmv-gc.com/api/active-chats');
+            const { data } = await axios.get('https://api.dmv-gc.com/api/active-chats');
             if (Array.isArray(data)) {
                 setActiveChats(data.map(chat => ({
                     chatId: chat._id,

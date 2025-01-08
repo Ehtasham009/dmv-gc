@@ -19,7 +19,7 @@ function DashboardLogin() {
     const handleLogin = async () => {
         setError(null);
         try {
-            const response = await fetch('https://backend.dmv-gc.com/api/auth/login', {
+            const response = await fetch('https://api.dmv-gc.com/api/auth/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -9,7 +9,7 @@ import UserIdCard from '../components/server-dashboard/user-id-card';
 import "../sass/server-dashboard.scss";
 import axios from 'axios';
 
-const socket = io('https://backend.dmv-gc.com');
+const socket = io('https://api.dmv-gc.com/');
 
 function ServerDashboard() {
     const [activeTab, setActiveTab] = useState('support-chat');
@@ -25,7 +25,7 @@ function ServerDashboard() {
     useEffect(() => {
         const fetchActiveChats = async () => {
             try {
-                const response = await axios.get('https://backend.dmv-gc.com/api/active-chats');
+                const response = await axios.get('https://api.dmv-gc.com/api/active-chats');
                 setActiveChats(response.data.map(chat => ({
                     chatId: chat._id,
                     name: chat.senderId,  // or any other identifier you want to display
@@ -118,7 +118,7 @@ function ServerDashboard() {
 
     const fetchSupportBotChats = async () => {
         try {
-            const response = await fetch('https://backend.dmv-gc.com/api/chat/getboothistory');
+            const response = await fetch('https://api.dmv-gc.com/api/chat/getboothistory');
             const data = await response.json();
             console.log(data, 'here are the data')
             setSupportBotChats(data);

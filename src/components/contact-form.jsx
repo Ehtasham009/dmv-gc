@@ -39,7 +39,8 @@ function ContactForm() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('https://backend.dmv-gc.com/api/auth/contact-form', formData);
+            // const response = await axios.post('https://api.dmv-gc.com/api/auth/contact-form', formData);
+            const response = await axios.post('https://api.dmv-gc.com/api/auth/contact-form', formData);
             if (response.status === 200) {
                 toast.success('Form submitted successfully!',{ position: 'top-right' });
                 setFormData({
