@@ -10,6 +10,7 @@ const StyledCom = styled.div`
         
         .image-holder{color: var(--primary-color)}
         .title{color: var(--content-color);  font-weight: 700}
+        &:hover .title{color: var(--secondary-color);}
         .arrow-holder{position: absolute; right: 15px; top: 15px}
 
         &:hover{scale: 1.05; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2)}

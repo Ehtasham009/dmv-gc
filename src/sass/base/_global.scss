@@ -15,8 +15,8 @@
 
 	.btn{--item-gap: 30px; --px: var(--item-gap); padding: 3px var(--px); outline: none !important; white-space: nowrap; min-height: var(--button-height); display: inline-flex; justify-content: center; align-items: center; border-radius: var(--default-radius); border: 0; font-size: 18px; font-weight: 600;}
 	.button-primary{background: var(--primary-color); color: white;}
-	.button-primary:hover{background: var(--primary-color-dark); color: white;}
-	.button-secondary{background: var(--content-color); color: white;}
+	.button-primary:hover{background: var(--secondary-color); color: white;}
+	.button-secondary{background: var(--secondary-color); color: white;}
 	.button-secondary:hover{background: var(--primary-color-dark); color: white;}
 	.btn-rounded{border-radius: 100px;}
 	.btn-c-rounded{border-radius: 10px;}
@@ -210,15 +210,23 @@
 	.width-cover{width: 100%;}
 
 	.discover-property-btn{
-		--size: 110px; position: fixed; bottom: 30px; left: 20px; height: var(--size); width: var(--size); border-radius: var(--size); background: white; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); color: white; animation: image_scling 0.8s infinite linear;
+		--size: 110px; position: fixed; bottom: 30px; left: 20px; height: var(--size); width: var(--size); border-radius: var(--size); background: white; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); color: white; 
 		// a{color: white;}
 		// svg.text{ animation: rotateDiscover 7s infinite linear;}
 		.arrow-holder{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border: 1px solid #B1B1B1; border-radius: 50px; padding: 11px;}
+		svg.text{ animation: rotateDiscover 7s infinite linear;}
 		.arrow-holder svg{animation:  0.8s infinite linear;}
 
 	
 	}
-	
+
+	.yarl__navigation_prev, .yarl__navigation_next{
+		background-color: var(--yarl__container_background_color,var(--yarl__color_backdrop,#000)) !important; height: 100%;
+	}
+	.yarl__icon{height: var(--yarl__icon_size, 54px) !important; width: var(--yarl__icon_size, 54px) !important;}
+	.yarl__toolbar{z-index: 99 !important;} 
+	.yarl__toolbar .yarl__button:hover{color: var(--yarl__color_button_active, var(--secondary-color));} 
+
 	// .discover-property-btn{
 	// 	--size: 110px; position: fixed; top: 50%; transform: translateY(-50%); right: 10px; height: var(--size); width: var(--size); border-radius: var(--size); background: white; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 	
@@ -234,7 +242,7 @@
 	}
 	@keyframes image_scling {
 		0% {transform: scale(0.9);}
-		50% {transform: scale(1.1);}
+		
 		100% {transform: scale(0.9);}
 	}
 
@@ -287,7 +295,7 @@
 			}
 			&:nth-child(-n+2)::after{content: ""; width: 90%; height: 1px; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); background: #B1B1B1}
 	
-			.icon-rounded{--size: 70px; border: 2px solid var(--primary-color); background: white}
+			.icon-rounded{--size: 70px; border: 2px solid var(--primary-color); background: white; color: var(--primary-color)}
 			p{color: #999999; margin-bottom: 0}
 		}
 		

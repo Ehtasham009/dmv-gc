@@ -6,6 +6,7 @@ import styled from 'styled-components';
 
 const StyledCom = styled.div`
     min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative;
+    &::before{content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(ellipse at top, var(--primary-color), transparent), radial-gradient(ellipse at bottom, var(--secondary-color), transparent); z-index: 1; opacity: 0.2}
     
     // .image-holder{height: 100vh; position: absolute; top: 0; left: 0}
     .slider-image-holder{height: 100vh;}

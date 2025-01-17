@@ -10,9 +10,8 @@ import UseDeviceType from './deviceBreakPoint';
 import SupportChatModule from './supportChatModule';
 
 const StyledCom = styled.div`
-    position: fixed; top: 0; left: 0; width: 100%; background: rgba(255, 255, 255, 0.5); min-height: 90px; padding: 10px 50px; z-index: 9; margin-top: 26px;
-    &.active_menu{background: rgba(255, 255, 255, 1); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);}
-
+    position: fixed; top: 0; left: 0; width: 100%; background: rgba(255, 255, 255, 1); min-height: 90px; padding: 10px 50px; z-index: 9; margin-top: 26px;
+    &.active_menu{background: rgba(255, 255, 255, 1); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);}
     .slogan-holder{position: absolute; top: -27px; left: 0; width: 100%; background: var(--primary-color); color: white; display: flex; align-items: center; font-size: 14px; padding: 5px }
 
     .main-nav a{color: var(--content-color); font-weight: 700; text-decoration: none}
@@ -43,9 +42,37 @@ const StyledCom = styled.div`
 		position: fixed; bottom: 20px; right: 20px; 
 
         .chat-support-button{
-            --size: 60px; height: var(--size); width: var(--size); border-radius: var(--size); background: var(--primary-color); box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); color: white; cursor: pointer; position: relative;
+            --size: 60px; height: var(--size); width: var(--size); border-radius: var(--size); background: var(--secondary-color); box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); color: white; cursor: pointer; position: relative; display: flex; align-items: center; transition: width 0.3s;  overflow: hidden;
             &.new-message::before{content: ''; height: 13px; width: 13px; border-radius: 15px; background: var(--secondary-color); position: absolute; top: -3px; right: 6px;}
-            .arrow-holder{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 50px; padding: 11px;}
+            .arrow-holder{border-radius: 50px; padding: 11px;}
+            &:hover{width: 178px}
+            .content{color: transparent; white-space: nowrap}
+            &:hover .content{color: white}
+
+            .dot {
+                fill:var(--secondary-color);
+                animation: wave 1.3s linear infinite;
+
+                &:nth-child(3) {
+                    animation-delay: -0.9s;
+                }
+                &:nth-child(4) {
+                    animation-delay: -1.1s;
+                }
+
+                // &:nth-child(3) {
+                //     animation-delay: -0.9s;
+                // }
+            }
+                @keyframes wave {
+                0%, 60%, 100% {
+                    transform: initial;
+                }
+
+                30% {
+                    transform: translateY(-7px);
+                }
+            }
         }
     }   
     
@@ -124,7 +151,7 @@ function Header() {
         </nav>
         {isDesktop ? 
             <div>
-                <Link to="/contact" className='btn button-primary btn-c-rounded'>Contact Us</Link>
+                <Link to="/contact" className='btn button-primary btn-c-rounded'>Schedule  Free Consultation</Link>
             </div>
         : null}
         <div className='h-list justify-content-center discover-property-btn'>
@@ -137,10 +164,11 @@ function Header() {
         </div>
         <div className='chat-support-module-holder'>
         <SupportChatModule isActive={isChatModuleActive} onClose={closeChatModule} />
-            <div className='h-list justify-content-center chat-support-button' onClick={chatModulePopupOpen}>
+            <div className='chat-support-button' onClick={chatModulePopupOpen}>
                 <div className='arrow-holder'>
                     <ReactSVG src='./images/chat-icon.svg' />
                 </div>
+                <div className='content'>Chat with us!</div>
             </div>
         </div>
         {isMobile || isTablet ? 

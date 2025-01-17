@@ -29,7 +29,7 @@ const StyledCom = styled.div`
         .support-header {
             justify-content: space-between;
             gap: 20px;
-            background-color: var(--primary-color);
+            background-color: var(--secondary-color);
             color: white;
             padding: 5px 10px;
             font-weight: 700;
@@ -110,7 +110,7 @@ const StyledCom = styled.div`
 
                     .support-button {
                         text-align: right;
-                        color: var(--primary-color);
+                        color: var(--secondary-color);
                         font-weight: 700;
                         font-size: 16px;
                         cursor: pointer;
@@ -162,7 +162,7 @@ const StyledCom = styled.div`
                 color: #fff;
                 padding-right: 4px;
                 padding-bottom: 4px;
-                background: var(--primary-color);
+                background: var(--secondary-color);
                 position: absolute;
                 top: 10px;
                 left: 10px;
@@ -602,7 +602,7 @@ function SupportChatModule({ isActive, onClose }) {
                                     <ReactSVG src='./images/back-arrow.svg' />
                                 </div>
                                 <div className='buttons-holder'>
-                                    <button className='btn button-primary btn-c-rounded' onClick={() => setShowScreen('liveChatLogin')}>Customer Support</button>
+                                    <button className='btn button-secondary btn-c-rounded' onClick={() => setShowScreen('liveChatLogin')}>Customer Support</button>
                                 </div>
                             </div>
                         </div>
@@ -652,7 +652,7 @@ function SupportChatModule({ isActive, onClose }) {
                                         <div className="input-holder">
                                             <input className='form-control' type="text" required placeholder='Email Address' value={email} onChange={(e) => setEmail(e.target.value)} />
                                         </div>
-                                        <button className='btn button-primary btn-c-rounded' onClick={handleContinue}>Continue</button>
+                                        <button className='btn button-secondary btn-c-rounded' onClick={handleContinue}>Continue</button>
                                     </div>
                                 </div>
                             )}
