@@ -9,7 +9,7 @@ import ProjectCard from "./project-card";
 function ProjectsList() {
 	const Cards =  projectsGalaryData.map(project => {
 		return ( 
-			<ProjectCard afterImage={project.images[0].imageUrl2} id={project.id} client={project.client} category={project.category} details={project.details}/>
+			<ProjectCard afterImage={project.images[0].imageUrl2} id={project.id} client={project.client} category={project.category} details={project.details} description={project.description}  />
 		)
 	});
 

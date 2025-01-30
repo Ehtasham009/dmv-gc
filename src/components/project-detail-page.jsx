@@ -23,6 +23,9 @@ const StyledCom = styled.div`
         h1::after{content: ""; position: absolute;  height: 40%; width: 100%; background: var(--primary-color); bottom: 0; left: 50%; transform: translateX(-50%); z-index: -1}
 
     }
+    .section-title{font-size: 34px}
+    .point-item{margin-bottom: 5px; font-size: 16px; position: relative; display: flex; gap: 10px; align-items: flex-start; padding-left: 10px}
+    .point-item::before{content: ""; position: relative; --size: 6px; height: var(--size); width: var(--size); background: var(--secondary-color); border-radius: 50%; margin-top: 9px}
 	.images-holder {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -83,16 +86,18 @@ const ProjectDetailPage = () => {
                     <p>{tService.description}</p>
                     {tService.titles.map((title, index) => (
                         <div key={index} className="mb-3">
-                        <h4 className="mb-2">{title}</h4>
+                        {/* <h4 className="mb-2">{title}</h4> */}
                             <div className="description-holder mb-4">
-                                <ul className="ps-4">
                                     {tService.details[index].map((item, detailIndex) => (
-                                            <li key={detailIndex} className="mb-1 font-size-16"><strong className="text-primary">{item.point_title}</strong> {item.point_desc}</li>
-                                        ))}
-                                </ul>
+                                        <div>
+                                            <div className={`${item.point_title !== '' ? 'mt-4 mb-1 ' : ''}`}><strong>{item.point_title}</strong></div>
+                                            <div key={detailIndex} className="point-item"> {item.point_desc}</div>
+                                        </ div>
+                                    ))}
                             </div>
                         </div>
                     ))}
+                    <p className=""><strong>Final result: </strong> {tService.lastDescription}</p>
                     <div className="images-holder" data-gap="20">
                         {tService.images.map((imageItem, index) => {
                             const beforeImage = { imageUrl: imageItem.imageUrl1 };
