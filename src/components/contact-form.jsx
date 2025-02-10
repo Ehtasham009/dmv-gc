@@ -64,43 +64,43 @@ function ContactForm() {
 
   return (
     <Form onSubmit={handleSubmit}>
-            <div className={`input-item ${inputActive ? 'active' : ''}`}>
+            <div className={`input-item `}>
                 <input
                     type="text"
                     name="name"
-                    className="form-control"
+                    className={`form-control ${formData.name ? 'active' : ''}`}
                     value={formData.name}
                     onChange={handleInputChange}
                 />
                 <label>Name</label>
                 <div className="border_"></div>
             </div>
-            <div className={`input-item ${inputActive ? 'active' : ''}`}>
+            <div className={`input-item `}>
                 <input
                     type="number"
                     name="phoneNumber"
-                    className="form-control"
+                    className={`form-control ${formData.phoneNumber ? 'active' : ''}`}
                     value={formData.phoneNumber}
                     onChange={handleInputChange}
                 />
                 <label>Phone</label>
                 <div className="border_"></div>
             </div>
-            <div className={`input-item ${inputActive ? 'active' : ''}`}>
+            <div className={`input-item `}>
                 <input
                     type="email"
                     name="email"
-                    className="form-control"
+                    className={`form-control ${formData.email ? 'active' : ''}`}
                     value={formData.email}
                     onChange={handleInputChange}
                 />
                 <label>Email</label>
                 <div className="border_"></div>
             </div>
-            <div className={`input-item ${inputActive ? 'active' : ''}`}>
+            <div className={`input-item `}>
                 <textarea
                     name="message"
-                    className="form-control"
+                    className={`form-control ${formData.message ? 'active' : ''}`}
                     value={formData.message}
                     onChange={handleInputChange}
                 />
